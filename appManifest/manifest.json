@@ -1,0 +1,88 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.14",
+  "version": "1.0.0",
+  "id": "53e0626e-09d8-4c54-a6ac-dc9154fb7e9b",
+  "packageName": "com.teams.sample.teamsconversationbot",
+  "developer": {
+    "name": "ITConnectChatBot",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://www.teams.com/privacy",
+    "termsOfUseUrl": "https://www.teams.com/termsofuser"
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "name": {
+    "short": "ITConnectChatBot",
+    "full": "This sample showcases usage of various conversation events for teams bot."
+  },
+  "description": {
+    "short": "This sample showcases usage of various conversation events for teams bot.",
+    "full": "This sample showcases usage of various conversation events for teams bot for both personal and teams scope."
+  },
+  "accentColor": "#FFFFFF",
+  "bots": [
+    {
+      "botId": "8ee7b231-623e-4e24-802e-856c3c274d24",
+      "scopes": [
+        "personal",
+        "groupchat",
+        "team"
+      ],
+      "isNotificationOnly": false,
+      "supportsCalling": false,
+      "supportsVideo": false,
+      "supportsFiles": false,
+      "commandLists": [
+        {
+          "scopes": [
+            "personal",
+            "groupchat",
+            "team"
+          ],
+          "commands": [
+            {
+              "title": "MentionMe",
+              "description": "Sends message with @mention of the sender"
+            },
+            {
+              "title": "Show Welcome",
+              "description": "Shows the welcome card"
+            },
+            {
+              "title": "MessageAllMembers",
+              "description": "Send 1 to 1 message to all members of the current conversation"
+            },
+            {
+              "title": "MessageAllMembersUsingAadId",
+              "description": "Send 1 to 1 message to all members of the current conversation using their AADId"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "webApplicationInfo": {
+    "id": "8ee7b231-623e-4e24-802e-856c3c274d24",
+    "resource": "https://RscBasedStoreApp"
+  },
+  "authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        {
+          "name": "ChatMessageReadReceipt.Read.Chat",
+          "type": "Application"
+        }
+      ]
+    }
+  },
+  "validDomains": [
+   "*.ngrok-free.app"
+  ]
+}
